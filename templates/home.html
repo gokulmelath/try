@@ -1,0 +1,109 @@
+{% extends 'layout.html' %}
+{% block mycontent %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head>
+<body>
+        <div class="page-header">
+                <h1 style="text-align:center;color:blue;"><b>✈ Fill The Form For Ticket Booking ✈</b></h1>
+              </div>
+
+    <form type="form" style="margin: auto" method="POST" action="/result">
+        <div class="row">
+            <div class="col-sm-4">Name Of Passenger</div>
+            <div class="col-sm-4"><input type="text" name="name" class="form-control"placeholder="Enter Name" required/></div>
+        </div><br>
+
+        <div class="row">
+            <div class="col-sm-4">Address Of Passenger</div>
+            <div class="col-sm-4"><input type="textarea" name="address" class="form-control"placeholder="Enter Address" required/></div>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-4">Passport Number</div>
+            <div class="col-sm-4"><input type="text" name="pno" class="form-control"placeholder="Enter Passport Number" required/></div>
+        </div><br>
+
+        <div class="row">
+            <div class="col-sm-4">Bording Time</div>
+            <div class="col-sm-4"><input type="datetime-local" name="btime" class="form-control" required/></div>
+        </div><br>
+
+        <div class="row">
+            <div class="col-sm-4">From</div>
+            <div class="col-sm-4">
+                <select name="fairport" >
+                    <option required>From Airport</option>
+                    <option value="Mumbai–Chhatrapati Shivaji Airport">Mumbai–Chhatrapati Shivaji Airport
+
+                    </option>
+                    <option value="Bangalore–Kempegowda Airport">Bangalore–Kempegowda Airport</option>
+                    <option value="Coimbatore–Peelamedu Airport">Coimbatore–Peelamedu Airport</option>
+                    <option value="Delhi–Indira Gandhi Airport">Delhi–Indira Gandhi Airport</option>
+                    <option value="Mangalore–Bajpe Airport">Mangalore–Bajpe Airport</option>
+                    <option value="Thiruvananthapuram International Airport">Thiruvananthapuram International Airport</option>
+                    <option value="Kochi–Cochin International Airport">Kochi–Cochin International Airport</option>
+                    <option value="Kozhikode – Calicut International Airport (Karipur Airport)">Kozhikode – Calicut International Airport (Karipur Airport)
+                    </option>
+                </select>
+            </div>
+        </div><br>
+        <div class="row">
+                <div class="col-sm-4">To</div>
+                <div class="col-sm-4">
+                    <select name="tairport">
+                        <option>To Airport</option>
+                        <option value="Al Ain International Airport	">Al Ain International Airport	
+    
+                        </option>
+                        <option value="Delma Airport (Dalma)">Delma Airport (Dalma)</option>
+                        <option value="Ajman International Airport">Ajman International Airport</option>
+                        <option value="Fujairah International Airport">Fujairah International Airport	</option>
+                        <option value="Ras Al Khaimah International Airport">Ras Al Khaimah International Airport	</option>
+                        <option value="Sharjah International Airport">Sharjah International Airport	</option>
+                        <option value="Umm Al Quwain Airport">Umm Al Quwain Airport	</option>
+                        <option value="Al Bateen Executive Airport">Al Bateen Executive Airport	
+                        </option>
+                    </select>
+                </div>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-4">Seat Number</div>
+            <div class="col-sm-4">
+                <select name="seat">
+                    <option>S:No</option>
+                    <option value="A-11">A-11	
+
+                    </option>
+                    <option value="A-22">A-22</option>
+                    <option value="B-11">B-11</option>
+                    <option value="B-22">B-22	</option>
+                    <option value="C-11">C-11</option>
+                    <option value="C-22">C-22</option>
+                    <option value="D-11">D-11</option>
+                    <option value="D-22">D-22
+                    </option>
+                </select>
+            </div>
+    </div><br>
+        
+        <div class="row"><button style="margin:auto" class="btn btn-danger" type="submit" >Book Ticket</button></div>
+        <br>
+        
+    </form><br> 
+       
+       
+    
+</body>
+</html>
+
+{% endblock %}
