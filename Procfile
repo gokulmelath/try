@@ -1,1 +1,1 @@
-web: gunicorn employe:app
+web: gunicorn samplec:app
